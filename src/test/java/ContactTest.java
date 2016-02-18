@@ -10,4 +10,10 @@ public class ContactTest {
     assertEquals(true, testContact instanceof Contact);
   }
 
+  @Test
+  public void contact_returnsContactFullName_JaneDoe() {
+    Contact testContact = new Contact("Jane", "Doe", "May");
+    assertEquals("Jane Doe", testContact.wholeName());
+  }
+
 }

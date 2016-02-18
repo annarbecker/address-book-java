@@ -8,4 +8,20 @@ public class Contact {
     mLast = last;
     mBirthMonth = birthMonth;
   }
+
+  public String getFirst() {
+    return mFirst;
+  }
+
+  public String getLast() {
+    return mLast;
+  }
+
+  public String getBirthMonth() {
+    return mBirthMonth;
+  }
+
+  public String wholeName() {
+    return mFirst + " "  + mLast;
+  }
 }
