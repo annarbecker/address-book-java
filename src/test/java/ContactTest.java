@@ -22,4 +22,33 @@ public class ContactTest {
     assertTrue(testContact.getPhone() instanceof ArrayList);
   }
 
+  @Test
+  public void all_returnsAllInstancesOfContact_true() {
+    Contact firstContact = new Contact("Jane", "Doe", "May");
+    Contact secondContact = new Contact("Jane", "Doe", "May");
+    assertTrue(Contact.all().contains(firstContact));
+    assertTrue(Contact.all().contains(secondContact));
+  }
+  @Test
+  public void clear_removesAllContactInstancesFromMemory() {
+    Contact testContact = new Contact("Jane", "Doe", "May");
+    Contact.clear();
+    assertEquals(Contact.all().size(), 0);
+  }
+  @Test
+  public void find_returnsContactWithSameId() {
+    Contact testContact = new Contact("Jane", "Doe", "May");
+    assertEquals(Contact.find(testContact.getId()), testContact);
+  }
+
+  @Test
+  public void addPhone_addPhonetoContact() {
+    Contact testContact = new Contact("Jane", "Doe", "May");
+    Phone homePhone = new Phone("123");
+    Phone workPhone = new Phone ("456");
+    testContact.addPhone(homePhone);
+    testContact.addPhone(workPhone);
+    assertTrue(testContact.getPhone().contains(homePhone));
+    assertTrue(testContact.getPhone().contains(workPhone));
+  }
 }
