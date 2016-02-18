@@ -31,4 +31,8 @@ public class Phone {
       return null;
     }
   }
+
+  public static void clear() {
+    instances.clear();
+  }
 }

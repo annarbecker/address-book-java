@@ -38,4 +38,16 @@ public class PhoneTest {
     Phone work = new Phone("3");
     assertEquals(Phone.find(work.getId()), work);
   }
+
+  @Test
+  public void find_returnsNullWhenNoPhoneFound_null() {
+    assertTrue(Phone.find(999) == null);
+  }
+
+  @Test
+  public void clear_emptiesAllPhoneFromArrayList() {
+    Phone newPhone = new Phone("1");
+    Phone.clear();
+    assertEquals(Phone.all().size(), 0);
+}
 }

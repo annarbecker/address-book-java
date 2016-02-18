@@ -16,10 +16,10 @@ public class ContactTest {
     assertEquals("Jane Doe", testContact.wholeName());
   }
 
-  // @Test
-  // public void contact_initiallyReturnsEmptyArrayList() {
-  //   Contact testContact = new Contact("Jane", "Doe", "May");
-  //   assertTrue(testContact)
-  // }
+  @Test
+  public void contact_initiallyReturnsEmptyArrayList() {
+    Contact testContact = new Contact("Jane", "Doe", "May");
+    assertTrue(testContact.getPhone() instanceof ArrayList);
+  }
 
 }
