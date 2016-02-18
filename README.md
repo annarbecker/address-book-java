@@ -1,10 +1,11 @@
-# Title
+# Address Book
 
-#### Description and Date
+#### Address Book to store contacts | February 18, 2016
 
-#### Authors
+#### Anna Becker & Brad London
 
 ## Description
+An address book where you can store contact information for people you know.
 
 ## Setup/Installation Requirements
 
@@ -28,7 +29,7 @@ Java, Spark, Junit, Velocity, Fluentlenium, Bootstrap
 
 This software is licensed under the MIT license.
 
-Copyright (c) 2016
+Copyright (c) 2016 Anna Becker & Brad London
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
