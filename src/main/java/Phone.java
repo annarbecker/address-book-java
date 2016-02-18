@@ -23,4 +23,12 @@ public class Phone {
   public int getId() {
     return mId;
   }
+
+  public static Phone find(int id) {
+    try {
+      return instances.get(id - 1);
+    } catch (IndexOutOfBoundsException e) {
+      return null;
+    }
+  }
 }

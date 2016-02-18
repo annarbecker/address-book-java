@@ -30,4 +30,12 @@ public class PhoneTest {
     Phone testPhone = new Phone("1");
     assertEquals(Phone.all().size(), testPhone.getId());
   }
+
+  @Test
+  public void find_returnsPhonekWithSameId_work() {
+    Phone home = new Phone("1");
+    Phone cell = new Phone("2");
+    Phone work = new Phone("3");
+    assertEquals(Phone.find(work.getId()), work);
+  }
 }
