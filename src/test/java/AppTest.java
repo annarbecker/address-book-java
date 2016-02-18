@@ -24,10 +24,5 @@ public class AppTest extends FluentTest {
       assertThat(pageSource()).contains("");
   }
 
-  @Test
-  public void method_expectedBehavior_output() {
-    App testApp = new App();
-    assertEquals("output", testApp.getChange("input"));
-  }
 
 }
