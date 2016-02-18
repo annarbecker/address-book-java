@@ -3,17 +3,23 @@ import java.util.ArrayList;
 public class Phone {
   private String mPhoneNumber;
   private int mId;
+  private String mType;
 
   private static ArrayList<Phone> instances = new ArrayList<Phone>();
 
-  public Phone(String phoneNumber) {
+  public Phone(String phoneNumber, String type) {
     mPhoneNumber = phoneNumber;
+    mType = type;
     instances.add(this);
     mId = instances.size();
   }
 
   public String getPhoneNumber() {
     return mPhoneNumber;
+  }
+
+  public String getType() {
+    return mType;
   }
 
   public static ArrayList<Phone> all() {

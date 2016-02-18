@@ -44,8 +44,8 @@ public class ContactTest {
   @Test
   public void addPhone_addPhonetoContact() {
     Contact testContact = new Contact("Jane", "Doe", "May");
-    Phone homePhone = new Phone("123");
-    Phone workPhone = new Phone ("456");
+    Phone homePhone = new Phone("123", "home");
+    Phone workPhone = new Phone ("456", "cell");
     testContact.addPhone(homePhone);
     testContact.addPhone(workPhone);
     assertTrue(testContact.getPhone().contains(homePhone));
