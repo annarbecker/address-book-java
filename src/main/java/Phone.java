@@ -1,11 +1,26 @@
-public class Phone {
-  private String mHome;
-  private String mCell;
-  private String mWork;
+import java.util.ArrayList;
 
-  public Phone(String home, String cell, String work) {
-    mHome = home;
-    mCell = cell;
-    mWork = work;
+public class Phone {
+  private String mPhoneNumber;
+  private int mId;
+
+  private static ArrayList<Phone> instances = new ArrayList<Phone>();
+
+  public Phone(String phoneNumber) {
+    mPhoneNumber = phoneNumber;
+    instances.add(this);
+    mId = instances.size();
+  }
+
+  public String getPhoneNumber() {
+    return mPhoneNumber;
+  }
+
+  public static ArrayList<Phone> all() {
+    return instances;
+  }
+
+  public int getId() {
+    return mId;
   }
 }
