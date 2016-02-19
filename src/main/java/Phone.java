@@ -14,6 +14,10 @@ public class Phone {
     mId = instances.size();
   }
 
+  public String wholePhone() {
+    return mPhoneNumber + " : " + mType;
+  }
+
   public String getPhoneNumber() {
     return mPhoneNumber;
   }
